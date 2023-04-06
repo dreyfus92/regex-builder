@@ -1,4 +1,5 @@
 ---
+import { RegexGen } from "../components/RegexGen";
 import Sidebar from "../components/Sidebar.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -11,6 +12,7 @@ import Layout from "../layouts/Layout.astro";
         Astro Regex Builder 🤖
       </h1>
       <hr class="border-white border-[1px] w-10/12" />
+      <RegexGen client:load />
     </div>
   </main>
 </Layout>
