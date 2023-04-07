@@ -12,10 +12,14 @@ export const CopyToClipboard: FC<CopyToClipboardProps> = ({ text }) => {
   return (
     <>
       <h1>Click to copy:</h1>
-      <div>
-        <Button onClick={() => copy(text)}>{text}</Button>
-      </div>
-      <p>Copied value: {value ?? "Nothing is copied yet!"}</p>
+      <Button
+        type="button"
+        onClick={() => {
+          copy(text);
+        }}
+      >
+        {text}
+      </Button>
     </>
   );
 };

@@ -5,9 +5,15 @@ import { CopyToClipboard } from "./CopyToClipboard";
 export const RegexGen = () => {
   const basePrompt = "Write me a JavaScript regular expression that ";
   const [prompt, setPrompt] = useState<string>("");
-  if (prompt !== "") {
-    const finalPrompt = basePrompt + prompt;
-  }
+
+  const getFinalPrompt = (basePrompt: string, prompt: string) => {
+    if (basePrompt !== "" && prompt !== "") {
+      return basePrompt + prompt;
+    } else {
+      return "/[a-z]/";
+    }
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setPrompt(e.target.value);
     console.log(prompt);
@@ -27,12 +33,9 @@ export const RegexGen = () => {
         </div>
       </div>
       <div className="text-white">
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 py-4">
           <Button>Generated RegEx</Button>
-          <CopyToClipboard text="A" />
-          <p id="output" className="">
-            /[^a]/g
-          </p>
+          <CopyToClipboard text={getFinalPrompt(basePrompt, prompt)} />
         </div>
         <div className="flex">
           <p>Test String</p>
