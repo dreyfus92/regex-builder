@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { CopyToClipboard } from "./CopyToClipboard";
+import type { FC } from "react";
 
-export const RegexGen = () => {
+export const RegexGen: FC = () => {
   const basePrompt = "Write me a JavaScript regular expression that ";
   const [prompt, setPrompt] = useState<string>("");
 

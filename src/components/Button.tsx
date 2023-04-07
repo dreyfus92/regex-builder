@@ -1,4 +1,3 @@
-import type React from "react";
 import type { FC } from "react";
 
 export interface ButtonProps
