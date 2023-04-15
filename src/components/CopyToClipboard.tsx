@@ -1,8 +1,10 @@
+import 'react-toastify/dist/ReactToastify.css'
+
 import type { FC } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
+
 import useCopyToClipboard from '../lib/useCopyToClipboard'
 import { Button } from './Button'
-import { toast, ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 
 interface CopyToClipboardProps {
 	text: string

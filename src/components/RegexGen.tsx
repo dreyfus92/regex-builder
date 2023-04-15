@@ -1,8 +1,9 @@
-import { useState } from 'react'
-import { Button } from './Button'
-import { CopyToClipboard } from './CopyToClipboard'
-import { Codeblock } from './Codeblock'
 import type { FC } from 'react'
+import { useState } from 'react'
+
+import { Button } from './Button'
+import { Codeblock } from './Codeblock'
+import { CopyToClipboard } from './CopyToClipboard'
 
 export const RegexGen: FC = () => {
 	const basePrompt = 'Write me a JavaScript regular expression that '

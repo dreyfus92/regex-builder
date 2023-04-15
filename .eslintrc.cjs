@@ -8,7 +8,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'eslint-config-prettier',
     'standard',
     'plugin:astro/recommended'
   ],
@@ -18,6 +17,8 @@ module.exports = {
     project: './tsconfig.json'
   },
   rules: {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
     "no-unused-vars": "warn",
     "@typescript-eslint/no-unused-vars": [
       "warn",
@@ -48,6 +49,8 @@ module.exports = {
     }
   ],
   plugins: [
-    'react'
+    '@typescript-eslint',
+    'react',
+    'simple-import-sort'
   ],
 }
