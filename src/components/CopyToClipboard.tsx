@@ -22,7 +22,8 @@ export const CopyToClipboard: FC<CopyToClipboardProps> = ({ text }) => {
 						closeOnClick: true,
 						pauseOnHover: true,
 						draggable: true,
-						progress: undefined
+						progress: undefined,
+						theme: 'dark'
 					})
 					copy(text)
 				}}
