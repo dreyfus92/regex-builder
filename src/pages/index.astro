@@ -1,18 +1,16 @@
 ---
-import { RegexGen } from "../components/RegexGen";
-import Sidebar from "../components/Sidebar.astro";
-import Layout from "../layouts/Layout.astro";
+import { RegexGen } from '../components/RegexGen'
+import Sidebar from '../components/Sidebar.astro'
+import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title="Astro Regex Builder">
-  <main class="flex">
-    <Sidebar />
-    <div class="flex flex-col items-center w-full">
-      <h1 class="text-2xl font-bold text-white md:text-3xl py-8">
-        Astro Regex Builder 🤖
-      </h1>
-      <hr class="border-white border-[1px] w-10/12" />
-      <RegexGen client:load />
-    </div>
-  </main>
+<Layout title='Astro Regex Builder'>
+	<main class='flex'>
+		<!-- <Sidebar /> -->
+		<div class='flex flex-col items-center w-full'>
+			<h1 class='text-2xl font-bold text-white md:text-3xl py-8'>Astro Regex Builder 🤖</h1>
+			<hr class='border-white border-[1px] w-10/12' />
+			<RegexGen client:load />
+		</div>
+	</main>
 </Layout>
