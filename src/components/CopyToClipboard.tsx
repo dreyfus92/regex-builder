@@ -11,7 +11,7 @@ export type CopyToClipboardProps = {
 }
 
 export const CopyToClipboard: FC<CopyToClipboardProps> = ({ text }) => {
-	const [value, copy] = useCopyToClipboard()
+	const [_value, copy] = useCopyToClipboard()
 
 	return (
 		<>
