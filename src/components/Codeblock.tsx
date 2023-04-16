@@ -1,23 +1,46 @@
-import 'prismjs/components/prism-clike'
-import 'prismjs/components/prism-javascript'
-import 'prismjs/themes/prism-dark.css'
+import 'prismjs/themes/prism-solarizedlight.css'
 
-import { highlight, languages } from 'prismjs'
+import Prism from 'prismjs'
 import type { FC } from 'react'
 import { useState } from 'react'
 import Editor from 'react-simple-code-editor'
 
-export interface CodeblockProps {}
+import { Button } from './Button'
 
-export const Codeblock: FC<CodeblockProps> = () => {
-	const [code, setCode] = useState('function add(a, b) {\n  return a + b;\n}')
+export type CodeblockProps = {
+	regex: string
+}
+
+export const Codeblock: FC<CodeblockProps> = ({ regex }) => {
+	const codeBlock = `
+	const regex  = ${regex}
+	const t = "abacus";
+	const matches  = t.match(regex);
+	print(matches)
+	`
+
+	const [code, setCode] = useState(codeBlock)
+
 	return (
-		<Editor
-			className='border-[1px] border-white bg-white h-'
-			value={code}
-			onValueChange={(code) => setCode(code)}
-			highlight={(code) => highlight(code, languages.js, 'javascript')}
-			padding={10}
-		/>
+		<div>
+			<Editor
+				className=' rounded-xl p-4 w-[450px]'
+				tabSize={4}
+				value={code}
+				onValueChange={(code) => {
+					setCode(code)
+					console.log(code)
+				}}
+				highlight={(code) => Prism.highlight(code, Prism.languages.js, 'js')}
+				padding={10}
+				style={{
+					fontFamily: '"Fira code", "Fira Mono", monospace',
+					fontSize: 12,
+					backgroundColor: '#282c34',
+					color: '#fff'
+				}}
+			/>
+			<Button onClick={() => console.log('clicked')}>Run</Button>
+		</div>
 	)
 }

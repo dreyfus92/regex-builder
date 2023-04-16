@@ -10,7 +10,7 @@ export const Button: FC<ButtonProps> = (props) => {
 	return (
 		<button
 			{...rest}
-			className='flex items-center justify-center gap-2 rounded-xl border-4 border-black bg-red-700 px-8 py-4 font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none focus:outline-none active:scale-95'
+			className='text-white flex items-center justify-center gap-2 rounded-xl border-4 border-black bg-red-700 px-8 py-4 font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none focus:outline-none active:scale-95'
 		>
 			{children}
 		</button>

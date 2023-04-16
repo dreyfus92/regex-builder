@@ -6,7 +6,7 @@ import { toast, ToastContainer } from 'react-toastify'
 import useCopyToClipboard from '../lib/useCopyToClipboard'
 import { Button } from './Button'
 
-interface CopyToClipboardProps {
+export type CopyToClipboardProps = {
 	text: string
 }
 
