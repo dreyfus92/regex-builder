@@ -15,7 +15,7 @@ export const RegexGen: FC = () => {
 		if (basePrompt !== '' && prompt !== '') {
 			return basePrompt + prompt
 		} else {
-			return '/[^a]/g'
+			return '[bcf]at'
 		}
 	}
 
@@ -28,9 +28,9 @@ export const RegexGen: FC = () => {
 	}
 
 	return (
-		<div className='flex flex-col my-10 gap-20 md:flex-row text-white'>
+		<div className='flex flex-col my-10 gap-x-20 md:flex-row text-white'>
 			<div>
-				<div>
+				<div className='flex flex-col gap-y-5'>
 					<div>
 						<p className='py-4'>Write me a JavaScript regular expression that…</p>
 						<div className='relative w-full min-w-[200px]'>
