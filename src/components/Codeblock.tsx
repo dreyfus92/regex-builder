@@ -1,8 +1,7 @@
 import 'prismjs/themes/prism-solarizedlight.css'
 
 import Prism from 'prismjs'
-import type { FC } from 'react'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import Editor from 'react-simple-code-editor'
 
 import { Button } from './Button'
